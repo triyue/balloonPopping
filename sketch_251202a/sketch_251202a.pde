@@ -16,3 +16,6 @@ void draw() {
   iswin.DRAWisWin();
   entergame.DrawStartButton();
 }
+
+//please put everything together here and not elsewhere, classes aren't
+//declared if class has already done so (static and non-static)
