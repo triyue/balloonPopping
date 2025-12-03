@@ -12,10 +12,20 @@ button entergame = new button();
 GamePlay screen = new GamePlay();
 timer timing = new timer();
 
+ArrayList<Balloon> ball;
+
 void draw() {
   background (255);
+
+  for (int i = 0; i<10; i++)
+  {
+    ball.add(new Balloon(3*i,4*i));
+  }
+  
+  
+
   screen.drawGameScreen();
-  timing.time();
+  //timing.time();
   //islose.DRAWisLose();
   //iswin.DRAWisWin();
   //entergame.DrawStartButton();
