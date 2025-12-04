@@ -1,9 +1,16 @@
 boolean isGameStart = false;
 boolean isGameOver = false;
 boolean isGameWin = false;
+boolean timesup = false;
+int score = 0;
 
-void setup() {
+void setup()
+{
   size (400, 400);
+  for (int i = 0; i<10; i++)
+  {
+    ball.add(new Balloon(random(0, 400), random(90, 285)));
+  }
 }
 
 LoseScreen islose = new LoseScreen();
@@ -12,24 +19,21 @@ button entergame = new button();
 GamePlay screen = new GamePlay();
 timer timing = new timer();
 
-ArrayList<Balloon> ball;
+ArrayList<Balloon> ball = new ArrayList<Balloon>();
 
-void draw() {
+void draw()
+{
   background (255);
 
-  for (int i = 0; i<10; i++)
-  {
-    ball.add(new Balloon(3*i,4*i));
-  }
-  
-  
-
   screen.drawGameScreen();
-  //timing.time();
+  timing.time();
   //islose.DRAWisLose();
   //iswin.DRAWisWin();
   //entergame.DrawStartButton();
 }
 
-//please put everything together here and not elsewhere, classes aren't
-//declared if class has already done so (static and non-static)
+void mousePressed() {
+  for (Balloon b : ball) {
+    b.balloonClicked();
+  }
+}

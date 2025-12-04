@@ -2,6 +2,7 @@
 //will there will a crosshair?
 
 class Balloon {
+  boolean isPopped = false;
   PVector location;
   Balloon(float x, float y) {
     //float px = random(120,250);
@@ -10,9 +11,20 @@ class Balloon {
     location = new PVector(x, y);
   }
 
-  void DrawBalloon(int i) {
+  void DrawBalloon() {
+    if(isPopped == false){
     stroke(60);
     fill(78, 191, 242);
-    ellipse(200, 200, 60, 60);
+    ellipse(location.x, location.y, 60, 60);
   }
+  }
+  
+  void balloonClicked() {
+   if (dist(location.x,location.y, mouseX, mouseY) <= 30 && isPopped == false)
+   {
+     isPopped = !isPopped;
+     score += 1;
+   }
+  }
+  
 }

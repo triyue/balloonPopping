@@ -13,5 +13,14 @@ class GamePlay {
     fill(0);
     rect(0, 0, 400, 60); //top black box, put timer here
     rect (0, 310, 400, 400); //bottom black box, put score here
+    
+    fill(255);
+    textAlign(CENTER);
+    textSize(50);
+      text(score, 200, 360);
+
+    for (Balloon b : ball) {
+      b.DrawBalloon();
+    }
   }
 }

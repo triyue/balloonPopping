@@ -1,7 +1,6 @@
 //this should only be the time, reminder to add a boolean that allows lose screen
 
 class timer {
-  boolean timesup = false;
   timer() {
   }
 
