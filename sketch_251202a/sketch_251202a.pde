@@ -23,6 +23,7 @@ void draw()
 {
   background (255);
 
+
   if (gameState == 0)
   {
     begin.BeginGame();
@@ -37,15 +38,6 @@ void draw()
     iswin.DRAWisWin();
     entergame.DrawStartButton();
   }
-
-
-
-
-  //screen.drawGameScreen();
-  //timing.time();
-  //islose.DRAWisLose();
-  //iswin.DRAWisWin();
-  //entergame.DrawStartButton();
 }
 
 void mousePressed()

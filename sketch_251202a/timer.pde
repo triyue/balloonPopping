@@ -1,7 +1,7 @@
 float startTime;
 
 class timer {
-  
+
   timer() {
   }
 
