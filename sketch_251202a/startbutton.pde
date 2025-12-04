@@ -1,5 +1,4 @@
 class button {
-  boolean isClicked = false;
   button() {
   }
 
@@ -14,7 +13,14 @@ class button {
 
     if ((mouseX >= 70 && mouseX <= 330)&& (mouseY>= 200 && mouseY <= 360)) {
       if (mousePressed) {
-        isClicked = !isClicked;
+        gameState = 1;
+        ball.clear();
+        for (int i = 0; i<10; i++)
+        {
+          ball.add(new Balloon(random(0, 400), random(90, 285)));
+        }
+        score = 0;
+        startTime = millis();
         println("works");
       }
     }

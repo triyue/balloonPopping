@@ -1,18 +1,24 @@
-class Starting {
-  Starting() {
+class Starting
+{
+  Starting()
+  {
   }
 
-  void BeginGame() {
+  void BeginGame()
+  {
     fill (255);
     rect(0, 0, 400, 400);
   }
 }
 
-class LoseScreen {
-  LoseScreen() {
+class LoseScreen
+{
+  LoseScreen()
+  {
   }
 
-  void DRAWisLose() {
+  void DRAWisLose()
+  {
     noStroke();
     fill (0);
     rect (0, 0, 400, 400);
@@ -22,11 +28,14 @@ class LoseScreen {
   }
 }
 
-class WinScreen {
-  WinScreen() {
+class WinScreen
+{
+  WinScreen()
+  {
   }
 
-  void DRAWisWin() {
+  void DRAWisWin()
+  {
     noStroke();
     fill (0);
     rect (0, 0, 400, 400);

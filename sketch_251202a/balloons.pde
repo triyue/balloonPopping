@@ -1,17 +1,17 @@
 //note balloon arraylist goes here, make sure the inaction of POP is here
 //will there will a crosshair?
 
-class Balloon {
+class Balloon 
+{
   boolean isPopped = false;
   PVector location;
-  Balloon(float x, float y) {
-    //float px = random(120,250);
-    //float py = random(60,340);
-    // PVector location;
+  Balloon(float x, float y) 
+  {
     location = new PVector(x, y);
   }
 
-  void DrawBalloon() {
+  void DrawBalloon() 
+  {
     if(isPopped == false){
     stroke(60);
     fill(78, 191, 242);
@@ -25,6 +25,10 @@ class Balloon {
      isPopped = !isPopped;
      score += 1;
    }
+   //if (score == 10);
+   //{
+   //  gameState = 3;
+   //}
   }
   
 }
