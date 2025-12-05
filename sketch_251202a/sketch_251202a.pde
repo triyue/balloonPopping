@@ -1,14 +1,11 @@
-int score = 0;
+float score = 0;
 int gameState = 0;
 
 void setup()
 {
   size (400, 400);
-  //for (int i = 0; i<10; i++)
-  //{
-  //  ball.add(new Balloon(random(0, 400), random(90, 285)));
-  //}
 }
+
 
 LoseScreen islose = new LoseScreen();
 WinScreen iswin = new WinScreen();
@@ -19,11 +16,10 @@ Starting begin = new Starting();
 
 ArrayList<Balloon> ball = new ArrayList<Balloon>();
 
+
 void draw()
 {
   background (255);
-
-
   if (gameState == 0)
   {
     begin.BeginGame();
@@ -40,6 +36,7 @@ void draw()
   }
 }
 
+
 void mousePressed()
 {
   if (gameState == 1)
@@ -47,6 +44,7 @@ void mousePressed()
     for (Balloon b : ball)
     {
       b.balloonClicked();
-    }
+      b.movingClicked();
+    } 
   }
 }

@@ -21,7 +21,7 @@ class button {
         }
         score = 0;
         startTime = millis();
-        println("works");
+        //println("works");
       }
     }
   }

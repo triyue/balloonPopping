@@ -17,10 +17,13 @@ class GamePlay {
     fill(255);
     textAlign(CENTER);
     textSize(50);
-    text(score, 200, 360);
+    text(round(score), 200, 360);
 
     for (Balloon b : ball) {
       b.DrawBalloon();
+    }
+    for(Balloon b : ball) {
+    b.DrawMovingBalloon();
     }
   }
 }
