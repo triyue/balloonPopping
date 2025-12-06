@@ -5,6 +5,7 @@ class timer {
   timer() {
   }
 
+//time bar decrease and connecting lose state
   void time() {
     rectMode(CORNERS);
     int count = 7000;
@@ -15,6 +16,8 @@ class timer {
       gameState = 2;
       //println ("word");
     }
+    
+    //the clock visual
     fill(247, 32, 32);
     ellipse(60, 30, 40, 40);
     fill(255);

@@ -1,7 +1,5 @@
+//game screen visual 
 class GamePlay {
-  boolean isGameplay = false;
-  boolean lose = false;
-  boolean win = false;
   GamePlay() {
   }
 
@@ -18,7 +16,8 @@ class GamePlay {
     textAlign(CENTER);
     textSize(50);
     text(round(score), 200, 360);
-
+    
+//tells the balloons to draw here
     for (Balloon b : ball) {
       b.DrawBalloon();
     }

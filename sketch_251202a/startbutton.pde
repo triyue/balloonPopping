@@ -1,7 +1,9 @@
+//button to return to gameplay
 class button {
   button() {
   }
 
+//game screen
   void DrawStartButton() {
     rectMode(CORNERS);
     fill (255);
@@ -11,6 +13,7 @@ class button {
     rect( 150, 265, 255, 300);
     triangle(255, 225, 305, 280, 255, 340);
 
+//when mouse is pressed here, resets all game
     if ((mouseX >= 70 && mouseX <= 330)&& (mouseY>= 200 && mouseY <= 360)) {
       if (mousePressed) {
         gameState = 1;

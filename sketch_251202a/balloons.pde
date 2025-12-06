@@ -13,6 +13,7 @@ class Balloon
     location = new PVector(x, y);
   }
 
+//draw basic none moving ballon
   void DrawBalloon()
   {
     if (isPopped == false) {
@@ -22,25 +23,24 @@ class Balloon
     }
   }
 
+//setup for the vectors for moving balloon
   void DrawMovingBalloon()
   {
-    if(isMovPop != true)
+    if (isMovPop == false)
     {
-      if (isMoving != true) {
-
-      position = new PVector(0, height/2);
-      velocity = new PVector(0, 0);
-      acceleration = new PVector(.02, 0);
-      isMoving = true;
-      } 
-    
-    else {
-      //println("mobing");
-      DrewMovingBalloon();
-    }
+      if (isMoving == false) {
+        position = new PVector(0, height/2);
+        velocity = new PVector(0, 0);
+        acceleration = new PVector(.02, 0);
+        isMoving = true;
+      } else {
+        //println("mobing");
+        DrewMovingBalloon();
+      }
     }
   }
-
+  
+  //tells the setup where to go
   void DrewMovingBalloon()
   {
 
@@ -53,17 +53,20 @@ class Balloon
 
     position.add(velocity);
     velocity.add(acceleration);
+    stroke(60);
     fill(213, 162, 240);
     ellipse(position.x, position.y, 60, 60);
     //println("mobing");
   }
 
-  void balloonClicked() {
+  //making sure when mouse is within circle and is clicked, ball is removed and when all balloons gone win game. also add number to score.
+  void balloonClicked()
+  {
     if (dist(location.x, location.y, mouseX, mouseY) <= 30 && isPopped == false)
     {
       isPopped = !isPopped;
       score += 1;
-      if (score == 11)
+      if (score >= 11)
       {
         gameState = 3;
       }
@@ -74,9 +77,10 @@ class Balloon
     if (dist(position.x, position.y, mouseX, mouseY) <=30 && isMovPop == false)
     {
       isMovPop = !isMovPop;
-      score += .1;
-      if (score == 11)
+      score += .15;
+      if (score >= 11)
       {
+        gameState = 3;
       }
     }
   }

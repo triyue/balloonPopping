@@ -6,7 +6,7 @@ void setup()
   size (400, 400);
 }
 
-
+//declare other tabs
 LoseScreen islose = new LoseScreen();
 WinScreen iswin = new WinScreen();
 button entergame = new button();
@@ -16,7 +16,7 @@ Starting begin = new Starting();
 
 ArrayList<Balloon> ball = new ArrayList<Balloon>();
 
-
+//game state
 void draw()
 {
   background (255);
@@ -36,7 +36,7 @@ void draw()
   }
 }
 
-
+//making mouse clicked do all ballom stuff
 void mousePressed()
 {
   if (gameState == 1)

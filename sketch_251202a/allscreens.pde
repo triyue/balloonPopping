@@ -1,3 +1,5 @@
+//screens for start, lose, and win
+
 class Starting
 {
   Starting()
